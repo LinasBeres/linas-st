@@ -11,6 +11,7 @@ From the great guys at [suckless](https://suckless.org/)
 - [blinking cursor](https://st.suckless.org/patches/blinking_cursor/)
 - ~~[ligatures](https://st.suckless.org/patches/ligatures/)~~
 - [alpha](https://st.suckless.org/patches/alpha/)
+- [swapmouse](https://st.suckless.org/patches/swapmouse/)
 
 
 ## Requirements
