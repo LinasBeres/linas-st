@@ -12,6 +12,7 @@ From the great guys at [suckless](https://suckless.org/)
 - ~~[ligatures](https://st.suckless.org/patches/ligatures/)~~
 - [alpha](https://st.suckless.org/patches/alpha/)
 - [swapmouse](https://st.suckless.org/patches/swapmouse/)
+- [xclearwin](https://st.suckless.org/patches/xclearwin/)
 
 
 ## Requirements
