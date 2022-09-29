@@ -9,6 +9,8 @@ From the great guys at [suckless](https://suckless.org/)
 ## Patches
 - [xresources](https://st.suckless.org/patches/xresources/)
 - [blinking cursor](https://st.suckless.org/patches/blinking_cursor/)
+- ~~[ligatures](https://st.suckless.org/patches/ligatures/)~~
+- [alpha](https://st.suckless.org/patches/alpha/)
 
 
 ## Requirements
