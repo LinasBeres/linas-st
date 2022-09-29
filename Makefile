@@ -4,10 +4,17 @@
 
 include config.mk
 
-SRC = st.c x.c
-OBJ = $(SRC:.c=.o)
+SRC_DIR := src
+OBJ_DIR := obj
+BIN_DIR := bin
 
-all: options st
+BIN := $(BIN_DIR)/st
+SRC := $(wildcard $(SRC_DIR)/*.c)
+OBJ := $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+
+.PHONY: options config.h all
+
+all: options config.h $(BIN)
 
 options:
 	@echo st build options:
@@ -16,21 +23,21 @@ options:
 	@echo "CC      = $(CC)"
 
 config.h:
-	cp config.def.h config.h
+	cp config.def.h $(SRC_DIR)/config.h
 
-.c.o:
-	$(CC) $(STCFLAGS) -c $<
+$(BIN): $(OBJ) | $(BIN_DIR)
+	$(CC) $(STLDFLAGS) $^ -o $@
 
-st.o: config.h st.h win.h
-x.o: arg.h config.h st.h win.h
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+	$(CC) $(STCFLAGS) -c $< -o $@
 
-$(OBJ): config.h config.mk
-
-st: $(OBJ)
-	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
+$(BIN_DIR) $(OBJ_DIR):
+	mkdir -p $@
 
 clean:
-	rm -f st $(OBJ) st-$(VERSION).tar.gz
+	rm -f $(BIN) $(OBJ) st-$(VERSION).tar.gz
+	rmdir $(OBJ_DIR)
+	rmdir $(BIN_DIR)
 
 dist: clean
 	mkdir -p st-$(VERSION)
