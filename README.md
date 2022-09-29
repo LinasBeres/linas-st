@@ -7,7 +7,8 @@ My version of the st-0.8.5 terminal.
 From the great guys at [suckless](https://suckless.org/)
 
 ## Patches
-
+- [xresources](https://st.suckless.org/patches/xresources/)
+- [blinking cursor](https://st.suckless.org/patches/blinking_cursor/)
 
 
 ## Requirements
