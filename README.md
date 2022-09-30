@@ -17,7 +17,7 @@ From the great guys at [suckless](https://suckless.org/)
 
 
 ## Requirements
-In order to build st you need the Xlib header files.
+In order to build st you need the Xlib header files and Harfbuzz library and headers.
 
 ## Installation
 Edit config.mk to match your local setup (st is installed into
